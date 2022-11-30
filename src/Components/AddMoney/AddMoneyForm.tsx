@@ -44,21 +44,7 @@ const AddMoneyForm = (): JSX.Element => {
           setState('تایید')
         }
       }, [])
-    // const handleSubmit = event => {
-    //     event.preventDefault()
-    //     if (update === 'add') {
-    //         dispatch(addMoney(form))
-    //         setOpenDialog(true)
-    //     } else {
-    //         dispatch(updateCard(FormStatus))
-    //     }
-    //     setFormStatus({
-    //         id: Math.floor(Math.random() * 1000),
-    //         f: '',
-    //         title: '',
-    //     })
-    //     setUpdate('add')
-    // }
+
     return (
         <Grid container item xs={12}>
             <Grid container item xs={12}>
@@ -88,7 +74,7 @@ const AddMoneyForm = (): JSX.Element => {
                 </Button>
              
             </Grid>
-            <AddMoneyFormDialog open={openDialog}/>
+            <AddMoneyFormDialog open={openDialog} type={form.type}/>
         </Grid>
     )
 }
